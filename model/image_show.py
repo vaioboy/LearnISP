@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt
 from matplotlib import image as img
 import numpy as np
-
+import cv2
 
 #input is a RGB numpy array with shape (height,width,3), can be uint,int, float or double, values expected in the range 0..255
 #output is a double YUV numpy array with shape (height,width,3), values in the range 0..255
@@ -45,3 +45,6 @@ plt.subplot(1,3,3)
 plt.imshow(image_rgb)
 
 plt.show()
+
+cv_image = cv2.imread('../image/Scrat_640x480.jpg')
+cv2.imwrite('Scrat.jpg', cv_image)
